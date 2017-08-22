@@ -1,0 +1,80 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('http://www.aztbc.com/web/uploads/gallery/90b2344db65b87951f39a499d357471ccricket-ball.jpg');
+}
+.upload {
+  width: 400px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+.upload-header {
+  margin-top: 0px;
+  color: white;
+}
+.upload-container-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.upload-container-image-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.upload-container-image-holder-image {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.upload-container-image-uploader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  margin-left: 16px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+}
+.upload-container-image-uploader .upload-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.upload-container-image-uploader:hover {
+  cursor: pointer;
+}
+.upload-container .upload-button {
+  height: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: white;
+  border-radius: 4px;
+  background: none;
+  border: none;
+}
+.upload-container .upload-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}

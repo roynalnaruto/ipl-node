@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+  </head>
+  <body>
+    <div class="signup">
+      <h2 class="signup-header">Sign up</h2>
+      <% if (message.length > 0) { %>
+        <div class="signup-message-alert"><%= message %></div>
+      <% } %>
+      <form class="signup-container" action="/signup" method="post">
+        <input class="signup-container-input" placeholder="Username" name="username" />
+        <input class="signup-container-input" placeholder="Email ID" name="email" />
+        <input class="signup-container-input" type="password" placeholder="Password" name="password" />
+        <input class="signup-container-input" type="password" placeholder="Re-enter password" name="reEnterPassword" />
+        <input class="signup-container-input" placeholder="Full name" name="name" />
+        <div class="signup-footer">
+          <button type="submit" class="signup-footer-signup">Sign up</button>
+          <div class="signup-footer-login">
+            Already a user?
+            <a href="/login">Login</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="js/signup.js"></script>
+</html>

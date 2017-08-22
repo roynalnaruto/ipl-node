@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="css/rangeslider.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.1.1/rangeslider.js"></script>
+    <script type="text/javascript" src="http://www.datejs.com/build/date.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-user"><%= user.username %></div>
+      <a class="header-logout" href="/logout">Logout</a>
+    </div>
+    <div class="home">
+      <div class="home-container">
+        <div class="home-container-left-panel">
+          <div id="home-container-left-panel-history" class="home-container-left-panel-history">
+          </div>
+          <div class="chat">
+            <div id="chat-status" class="chat-status">
+              Chatbox
+            </div>
+            <div id="chat-chatbox" class="chat-chatbox">
+            </div>
+            <div id="chat-input" class="chat-input" contenteditable="true" placeholder="Type a message"></div>
+          </div>
+        </div>
+        <div class="home-container-content">
+          <div class="home-container-content-player">
+            <div class="home-container-content-player-image">
+              <img class="player-image" src="http://rs1048.pbsrc.com/albums/s364/rasikababar/4_zpsa7yx0roc.jpg~c200" />
+            </div>
+            <div class="home-container-content-player-details">
+              <div id="player-name" class="player-name"></div>
+              <div id="player-team" class="player-team"></div>
+              <div id="player-position" class="player-position"></div>
+            </div>
+            <div class="home-container-content-player-stats">
+              <div class="player-matches">
+                <div class="player-matches-label">Matches</div>
+                <div class="value-holder player-matches-value">
+                  <span id="player-matches-value"></span>
+                </div>
+              </div>
+              <div class="player-runs">
+                <div class="player-runs-label">Runs</div>
+                <div class="value-holder player-runs-value">
+                  <span id="player-runs-value"></span>
+                </div>
+              </div>
+              <div class="player-wickets">
+                <div class="player-wickets-label">Wickets</div>
+                <div class="value-holder player-wickets-value">
+                  <span id="player-wickets-value"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-container-content-bid">
+            <div id="home-container-content-bid-bids" class="home-container-content-bid-bids">
+
+            </div>
+            <div class="home-container-content-bid-time">
+              <div id="countdown" class="countdown">
+                02 : 00
+              </div>
+            </div>
+            <div class="home-container-content-bid-input">
+              <div class="home-container-content-bid-input-wrapper">
+                <input type="range" min="10" max="100" step="10" value="20" data-rangeslider>
+              </div>
+              <div id="bid-amount" class="bid-amount"></div>
+            </div>
+            <div class="home-container-content-bid-actions">
+              <button id="action-pause" class="action action-pause">Pause</button>
+              <button id="action-reject" class="action action-reject">Not interested</button>
+              <button id="action-bid" class="action action-bid">Bid</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home-right-panel">
+      </div>
+    </div>
+    <div class="footer">
+    </div>
+  </body>
+  <script src="http://172.26.152.187:3000/socket.io/socket.io.js"></script>
+  <script src="js/home.js"></script>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Upload photo</title>
+    <link rel="stylesheet" type="text/css" href="css/uploadPhoto.css">
+  </head>
+  <body>
+    <div class="upload">
+      <h2 class="upload-header">Upload photo</h2>
+      <form class="upload-container" method="post" action="/uploadPhoto", enctype="multipart/form-data">
+        <div class="upload-container-image">
+          <div class="upload-container-image-holder">
+            <img class="upload-container-image-holder-image" id="profile-photo-img" src="http://www.ivonly.com/assets/images/user-image.jpg" />
+          </div>
+          <div class="upload-container-image-uploader">
+            <span id="profile-photo-label">Choose photo</span>
+            <input class="upload-input" type="file" name="profilePhoto" id="profile-photo" onchange="getPhoto(this);" />
+          </div>
+        </div>
+        <button class="upload-button" type="submit">Upload</button>
+      </form>
+    </div>
+  </body>
+  <script src="js/uploadPhoto.js"></script>
+</html>

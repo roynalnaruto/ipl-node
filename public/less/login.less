@@ -1,0 +1,84 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('http://www.aztbc.com/web/uploads/gallery/90b2344db65b87951f39a499d357471ccricket-ball.jpg');
+}
+.login {
+  padding: 32px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 8px 8px 16px rgba(37, 32, 32, 0.42);
+  &-header {
+    margin-top: 0px;
+    font-family: sans-serif;
+    color: white;
+  }
+  &-message-alert {
+    padding: 8px;
+    color: red;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  &-container {
+    margin-bottom: 0px;
+    &-username {
+      padding: 8px;
+      height: 40px;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      width: 100%;
+      outline: none;
+    }
+    &-password {
+      padding: 8px;
+      height: 40px;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      width: 100%;
+      outline: none;
+    }
+    .login-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-login {
+        padding-left: 16px;
+        padding-right: 16px;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        height: 32px;
+        color: white;
+      }
+      &-login:hover {
+        box-shadow: 4px 4px 8px rgba(37, 32, 32, 0.42);
+        cursor: pointer;
+      }
+      &-signup {
+        font-family: sans-serif;
+        font-weight: bold;
+        color: white;
+        a {
+          padding: 8px;
+          margin-left: 8px;
+          text-decoration: none;
+          color: white;
+        }
+        a:hover {
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

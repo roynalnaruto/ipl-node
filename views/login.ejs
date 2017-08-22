@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+  </head>
+  <body>
+    <div class="login">
+      <h2 class="login-header">Login</h2>
+      <% if (message.length > 0) { %>
+        <div class="login-message-alert"><%= message %></div>
+      <% } %>
+      <form class="login-container" action="/login" method="post">
+        <input id="login-username" class="login-container-username"
+          type="text" name="username" placeholder="Username" />
+        <input id="login-password" class="login-container-password"
+          type="password" name="password" placeholder="Password" />
+        <div class="login-footer">
+          <button class="login-footer-login" type="submit">Login</button>
+          <div class="login-footer-signup">Not a user?<a href="/signup">Sign up</a></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

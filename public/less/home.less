@@ -1,0 +1,306 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+.padding() {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.scroll() {
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 4px;
+    z-index: 1010;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 2px;
+    z-index: 1010;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #ddd;
+    z-index: 1010;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+    cursor: pointer;
+  }
+}
+
+.header {
+  height: 40px;
+  background: #e8e8e8;
+  .padding();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-user {
+    .padding();
+  }
+  &-logout {
+    .padding();
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+  }
+  &-logout:hover {
+    background: #fff;
+  }
+}
+
+.home {
+  height: calc(~"100% - " 112px);
+  &-container {
+    height: 100%;
+    display: flex;
+    &-left-panel {
+      flex-basis: 22%;
+      display: flex;
+      flex-direction: column;
+      &-history {
+        flex-basis: 45%;
+        background: #fff;
+        .padding();
+        &-item {
+          font-family: "Trebuchet MS", Helvetica, sans-serif;
+          padding: 8px;
+        }
+      }
+      .chat {
+        flex-basis: 55%;
+        .padding();
+        display: flex;
+        flex-direction: column;
+        background: rgba(221, 221, 221, 0.5);
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        &-status {
+          height: 23px;
+          padding: 8px;
+          border-bottom: 1px solid #aaa;
+        }
+        &-chatbox {
+          flex-grow: 1;
+          .scroll();
+          padding-left: 8px;
+          padding-right: 8px;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          .message {
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            max-width: 80%;
+            margin-bottom: 8px;
+            float: right;
+            clear: both;
+            min-width: 30%;
+            overflow: hidden;
+            &-header {
+              font-weight: bold;
+              margin-bottom: 8px;
+            }
+            &-container {
+              width: 100%;
+              overflow-x: hidden;
+              &-content {
+                white-space: normal;
+                &-time {
+                  float: right;
+                  color: #999;
+                  font-size: 11px;
+                  margin-left: 32px;
+                  margin-top: 4px;
+                }
+              }
+            }
+          }
+          .message-self {
+            max-width: 80%;
+            min-width: 30%;
+            background: white;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            overflow: hidden;
+            float: left;
+            clear: both;
+            &-container {
+              &-content-time {
+                float: right;
+                color: #999;
+                font-size: 11px;
+                margin-left: 32px;
+                margin-top: 4px;
+              }
+            }
+          }
+        }
+        &-input {
+          min-height: 40px;
+          max-height: 56px;
+          .scroll();
+          padding: 8px;
+          border-radius: 8px;
+          border: 1px solid #ddd;
+          outline: none;
+          color: #333;
+          background: white;
+        }
+        &-input:focus {
+          border-color: #33ccff;
+        }
+        &-input:empty:before {
+          content: attr(placeholder);
+          display: block;
+          color: #ddd;
+        }
+      }
+    }
+    &-content {
+      flex-basis: 78%;
+      display: flex;
+      &-player {
+        flex-basis: 50%;
+        background: #434343;
+        .padding();
+        &-image {
+          display: flex;
+          justify-content: center;
+          padding-top: 12%;
+          padding-bottom: 12%;
+          .player-image {
+            height: 160px;
+            width: 160px;
+            border-radius: 50%;
+          }
+        }
+        &-details {
+          font-size: calc(~"100% +" 5px);
+          padding-left: 32%;
+          font-family: sans-serif;
+          color: white;
+          padding-bottom: 12%;
+        }
+        &-stats {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: sans-serif;
+          color: white;
+          font-size: 20px;
+          .player-runs, .player-wickets {
+            margin-left: 32px;
+          }
+          .value-holder {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+      &-bid {
+        flex-basis: 50%;
+        background: #888;
+        .padding();
+        &-bids {
+          height: 30%;
+          font-family: "Trebuchet MS", Helvetica, sans-serif;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          &-item {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          &-item.last-bid {
+            height: 40%;
+            font-size: 24px;
+          }
+          &-item.recent-bid {
+            height: 25%;
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 8px;
+          }
+        }
+        &-time {
+          height: 28%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .countdown {
+            font-family: fantasy;
+            font-size: 72px;
+          }
+        }
+        &-input {
+          height: 20%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          &-wrapper {
+            width: 60%;
+          }
+          .bid-amount {
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            margin-top: 24px;
+            font-size: xx-large;
+          }
+        }
+        &-actions {
+          height: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .action {
+            height: 48px;
+            border: none;
+            border-radius: 8px;
+            background: none;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+          }
+          .action.action-reject {
+            margin-left: 32px;
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+          .action.action-bid {
+            margin-left: 32px;
+            padding-left: 32px;
+            padding-right: 32px;
+          }
+          .action:hover:enabled {
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 1px 1px 3px #555;
+          }
+          .action:hover:disabled {
+
+          }
+        }
+      }
+    }
+  }
+  &-right-panel {
+
+  }
+}
+
+.footer {
+  height: 40px;
+  background: #e8e8e8;
+  .padding();
+  display: flex;
+  align-items: center;
+}

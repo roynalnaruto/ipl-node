@@ -1,0 +1,327 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+.header {
+  height: 40px;
+  background: #e8e8e8;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-user {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.header-logout {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: black;
+  border-radius: 8px;
+}
+.header-logout:hover {
+  background: #fff;
+}
+.home {
+  height: calc(100% -  112px);
+}
+.home-container {
+  height: 100%;
+  display: flex;
+}
+.home-container-left-panel {
+  flex-basis: 22%;
+  display: flex;
+  flex-direction: column;
+}
+.home-container-left-panel-history {
+  flex-basis: 45%;
+  background: #fff;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.home-container-left-panel-history-item {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 8px;
+}
+.home-container-left-panel .chat {
+  flex-basis: 55%;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(221, 221, 221, 0.5);
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.home-container-left-panel .chat-status {
+  height: 23px;
+  padding: 8px;
+  border-bottom: 1px solid #aaa;
+}
+.home-container-left-panel .chat-chatbox {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.home-container-left-panel .chat-chatbox::-webkit-scrollbar {
+  width: 4px;
+  z-index: 1010;
+}
+.home-container-left-panel .chat-chatbox::-webkit-scrollbar-track {
+  border-radius: 2px;
+  z-index: 1010;
+}
+.home-container-left-panel .chat-chatbox::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #ddd;
+  z-index: 1010;
+}
+.home-container-left-panel .chat-chatbox::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+  cursor: pointer;
+}
+.home-container-left-panel .chat-chatbox .message {
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 80%;
+  margin-bottom: 8px;
+  float: right;
+  clear: both;
+  min-width: 30%;
+  overflow: hidden;
+}
+.home-container-left-panel .chat-chatbox .message-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.home-container-left-panel .chat-chatbox .message-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+.home-container-left-panel .chat-chatbox .message-container-content {
+  white-space: normal;
+}
+.home-container-left-panel .chat-chatbox .message-container-content-time {
+  float: right;
+  color: #999;
+  font-size: 11px;
+  margin-left: 32px;
+  margin-top: 4px;
+}
+.home-container-left-panel .chat-chatbox .message-self {
+  max-width: 80%;
+  min-width: 30%;
+  background: white;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  float: left;
+  clear: both;
+}
+.home-container-left-panel .chat-chatbox .message-self-container-content-time {
+  float: right;
+  color: #999;
+  font-size: 11px;
+  margin-left: 32px;
+  margin-top: 4px;
+}
+.home-container-left-panel .chat-input {
+  min-height: 40px;
+  max-height: 56px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  color: #333;
+  background: white;
+}
+.home-container-left-panel .chat-input::-webkit-scrollbar {
+  width: 4px;
+  z-index: 1010;
+}
+.home-container-left-panel .chat-input::-webkit-scrollbar-track {
+  border-radius: 2px;
+  z-index: 1010;
+}
+.home-container-left-panel .chat-input::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #ddd;
+  z-index: 1010;
+}
+.home-container-left-panel .chat-input::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+  cursor: pointer;
+}
+.home-container-left-panel .chat-input:focus {
+  border-color: #33ccff;
+}
+.home-container-left-panel .chat-input:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: #ddd;
+}
+.home-container-content {
+  flex-basis: 78%;
+  display: flex;
+}
+.home-container-content-player {
+  flex-basis: 50%;
+  background: #434343;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.home-container-content-player-image {
+  display: flex;
+  justify-content: center;
+  padding-top: 12%;
+  padding-bottom: 12%;
+}
+.home-container-content-player-image .player-image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+}
+.home-container-content-player-details {
+  font-size: calc(100% + 5px);
+  padding-left: 32%;
+  font-family: sans-serif;
+  color: white;
+  padding-bottom: 12%;
+}
+.home-container-content-player-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+  font-size: 20px;
+}
+.home-container-content-player-stats .player-runs,
+.home-container-content-player-stats .player-wickets {
+  margin-left: 32px;
+}
+.home-container-content-player-stats .value-holder {
+  display: flex;
+  justify-content: center;
+}
+.home-container-content-bid {
+  flex-basis: 50%;
+  background: #888;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.home-container-content-bid-bids {
+  height: 30%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-container-content-bid-bids-item {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-container-content-bid-bids-item.last-bid {
+  height: 40%;
+  font-size: 24px;
+}
+.home-container-content-bid-bids-item.recent-bid {
+  height: 25%;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 8px;
+}
+.home-container-content-bid-time {
+  height: 28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-container-content-bid-time .countdown {
+  font-family: fantasy;
+  font-size: 72px;
+}
+.home-container-content-bid-input {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-container-content-bid-input-wrapper {
+  width: 60%;
+}
+.home-container-content-bid-input .bid-amount {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin-top: 24px;
+  font-size: xx-large;
+}
+.home-container-content-bid-actions {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-container-content-bid-actions .action {
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+.home-container-content-bid-actions .action.action-reject {
+  margin-left: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.home-container-content-bid-actions .action.action-bid {
+  margin-left: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.home-container-content-bid-actions .action:hover:enabled {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 3px #555;
+}
+.footer {
+  height: 40px;
+  background: #e8e8e8;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
